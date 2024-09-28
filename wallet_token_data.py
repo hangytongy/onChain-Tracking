@@ -121,6 +121,11 @@ def plotting(addresses,dfs,token,days):
         tx_text = f"num of tx = {no_of_tx} \nAvg Accum = {avg_accumulation}"
         print(tx_text)
 
+        #fill chart till the latest date
+        if len(dfs[i]) > 0:
+            last_data = pd.DataFrame({'time' : current_date, 'cumulative' : dfs[i]['cumulative'].iloc[-1]})
+            dfs[i] = pd.concat([dfs[i],last_data], ignore_index=True)
+
         axs[k,j].fill_between(dfs[i]['time'], dfs[i]['cumulative'], color = 'skyblue', edgecolor = 'black', label = 'cumulative token')
         axs[k,j].set_title(f'cumulative Token {token} by address {address}', fontsize = fontsize)
         axs[k,j].set_xlabel("Date", fontsize = fontsize)
