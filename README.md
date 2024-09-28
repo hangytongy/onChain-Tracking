@@ -37,4 +37,9 @@
    ```
    streamlit run app.py
    ```
-   When you run the script, the http link would usually be your server IP followed by the port `8501`. eg. `http://11.22.33.44:8501/`   
+   When you run the script, the http link would usually be your server IP followed by the port `8501`. eg. `http://11.22.33.44:8501/`
+
+
+### Limitations
+
+This script was created with the querying of top holders using Dunes. In Dunes, in order to dynamically query the token contract address over a certain period of time, we can create parameters ({contract} & {time}). However, parameters are a paid feature. Therefore, current script hard codes the parameters into the individual queries and thus each permutation will have different query IDs. Not practicle if user wants a whole list of tokens and diff range of dates to track.
