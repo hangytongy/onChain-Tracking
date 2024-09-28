@@ -123,7 +123,7 @@ def plotting(addresses,dfs,token,days):
 
         #fill chart till the latest date
         if len(dfs[i]) > 0:
-            last_data = pd.DataFrame({'time' : current_date, 'cumulative' : dfs[i]['cumulative'].iloc[-1]})
+            last_data = pd.DataFrame({'time' : [current_date], 'cumulative' : [dfs[i]['cumulative'].iloc[-1]]})
             dfs[i] = pd.concat([dfs[i],last_data], ignore_index=True)
 
         axs[k,j].fill_between(dfs[i]['time'], dfs[i]['cumulative'], color = 'skyblue', edgecolor = 'black', label = 'cumulative token')
