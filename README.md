@@ -13,14 +13,16 @@
 
 2. **Set both the ethscan and dunes keys as environment variables**
     
-   Replace the `<API-KEY>` with your actual api keys.
-   Ethscan : https://ethscan.io/apis
-   Dunes: https://dune.com   
+   Replace the `<API-KEY>` with your actual api keys. 
     ```sh
     export api_key_ethscan=<API_KEY>
     export api_key_dunes=<API_KEY>
     ```
+   - Etherscan : https://ethscan.io/apis
+     
+   - Dunes: https://dune.com  
 
+    
 4. **Go into the repo,create your python environment and install the dependencies**
 
    ```
