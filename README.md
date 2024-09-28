@@ -13,13 +13,15 @@
 
 2. **Set both the ethscan and dunes keys as environment variables**
     
-    Replace the `<API-KEY>` with your actual api keys.
+   Replace the `<API-KEY>` with your actual api keys.
+   Ethscan : https://ethscan.io/apis
+   Dunes: https://dune.com   
     ```sh
     export api_key_ethscan=<API_KEY>
     export api_key_dunes=<API_KEY>
     ```
 
-3. **Go into the repo,create your python environment and install the dependencies**
+4. **Go into the repo,create your python environment and install the dependencies**
 
    ```
    cd onChain-Tracking
@@ -28,7 +30,7 @@
    pip install -r requirements.txt
    ```
 
-4. **Run the script and enjoy**
+5. **Run the script and enjoy**
 
    ```
    streamlit run app.py
