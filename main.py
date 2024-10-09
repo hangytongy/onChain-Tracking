@@ -14,7 +14,7 @@ def run_main(token,days):
 
     #Run on Dunes platform to get top 10 address 
     df = Dunes_query.dunes_query(token,days,api_key_dunes)
-    addresses = Dunes_query.get_wallet_data(df)
+    addresses, result = Dunes_query.get_wallet_data(df)
 
 
     dfs = []
@@ -35,7 +35,7 @@ def run_main(token,days):
     print("-----------------running plotting data---------------------")
     image_path = wallet_token_data.plotting(addresses,dfs,token,days)
 
-    return addresses, image_path
+    return addresses, image_path, result
 
 
 #if __name__ == "__main__":
