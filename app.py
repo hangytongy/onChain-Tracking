@@ -18,9 +18,9 @@ if st.button(f"Start for {token} , type {scrape_option}"):
     else:
         days = 7
 
-    addresses, image_path = run_main(token,days)
+    addresses, image_path, result = run_main(token,days)
     
-    st.session_state.dom_content = addresses
+    st.session_state.dom_content = result
     
     with st.expander(f"View top addresses for token {token}"):
         st.text_area("Addresses", addresses, height=300)
