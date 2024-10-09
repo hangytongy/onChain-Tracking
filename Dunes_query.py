@@ -70,7 +70,7 @@ def get_wallet_data(df):
         intent_2 = intent_2 + "/n" + f"{wallets['Holder'][i]:<30} | {wallets['Accumulation'][i]:<15} | {wallets['wallet_type'][i]:<15}"
     result = intent_1 + intent_2
 
-    return addresses,wallets
+    return addresses, result
     
 
 
