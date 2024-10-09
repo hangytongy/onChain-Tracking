@@ -23,7 +23,7 @@ if st.button(f"Start for {token} , type {scrape_option}"):
     st.session_state.dom_content = result
     
     with st.expander(f"View top addresses for token {token}"):
-        st.text_area("Addresses", addresses, height=300)
+        st.text_area("Addresses", result, height=300)
     
     st.success("Scraping completed!")
         

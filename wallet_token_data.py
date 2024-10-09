@@ -89,7 +89,7 @@ def plotting(addresses,dfs,token,days):
 
     print(f"number of addresses : {no_of_add}")
     
-    fig, axs = plt.subplots(ceil(no_of_add/2), 2, figsize=(23,23)) #rows, columns
+    fig, axs = plt.subplots(ceil(no_of_add/2), 2, figsize=(35,35)) #rows, columns
     
     for i in range(0,no_of_add):
         
@@ -104,7 +104,7 @@ def plotting(addresses,dfs,token,days):
 
         print(f"address : {address}")
 
-        fontsize = 14
+        fontsize = 16
 
         try:
             dates = dfs[i]['time'].tolist()
