@@ -61,11 +61,16 @@ def dunes_query(token,days,api_key):
 
 
 def get_wallet_data(df):
-    wallets = []
-    for wallet in df['holder']:
-        print(wallet)
-        wallets.append(wallet)
+    addresses = df['holder'].tolist()
+    wallets = {'Holder': df['holder'].tolist(), 'Accumated' : df['Balance'].tolist(), 'Wallet_type' : df['Trans_Status'].tolist()}
 
-    return wallets
+    intent_1 = f"{'Holder':<30} | {'Accumulation':<15} | {'Wallet Type':<15}" + "/n" + '-' * 65
+    intent_2 = ""
+    for i in range(len(wallets['Holder'])):
+        intent_2 = intent_2 + "/n" + f"{wallets['Holder'][i]:<30} | {wallets['Accumulation'][i]:<15} | {wallets['wallet_type'][i]:<15}"
+    result = intent_1 + intent_2
+
+    return addresses,wallets
+    
 
 
